@@ -1,8 +1,8 @@
 {
-  "name": "My Extension",
+  "name": "VIN Multiplier",
   "version": "1.0.0",
   "manifest_version": 3,
-  "description": "This is my browser extension.",
+  "description": "Zahl markieren und berechnen lassen.",
   "permissions": [
     "activeTab",
     "scripting",
@@ -11,14 +11,7 @@
   "action": {
     "default_popup": "popup.html"
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "popup.js"
-      ]
-    }
-  ]
+  "icons": {
+    "128": "icon.png"
+  }
 }
