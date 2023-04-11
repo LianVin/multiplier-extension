@@ -1,0 +1,1 @@
+(()=>{"use strict";let e;console.log("result"),chrome.action.onClicked.addListener((t=>{chrome.tabs.create({url:"popup.html"}),e=document.getElementById("selected-number"),e.textContent=document.getSelection().toString(),console.log(document.getSelection().toString())}))})();

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Extension</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <style>
+        body {
+            height: fit-content;
+            width: 600px;
+        }
+
+        .form {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .form-multiplicators {
+            display: flex;
+            align-items: center;
+            margin: 0 10px 10px 10px;
+            width: 33%;
+        }
+
+        .container {
+            width: 50%;
+        }
+
+        .form input,
+        .form-multiplicators input {
+            box-shadow: inset #abacaf 0 0 0 2px;
+            border: 0;
+            background: rgba(0, 0, 0, 0);
+            border-radius: 3px;
+            padding: 9px 12px;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-weight: 400;
+            transition: all .2s ease;
+            flex: 1;
+        }
+
+        input:hover {
+            box-shadow: 0 0 0 0 #fff inset, #0a009c 0 0 0 2px;
+        }
+
+        input:focus {
+            background: #fff;
+            outline: 0;
+            box-shadow: 0 0 0 0 #fff inset, #0a009c 0 0 0 3px;
+        }
+
+        .form button,
+        .form-multiplicators button,
+        .calculate {
+            display: inline-block;
+            outline: none;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 3px;
+            padding: 10px 24px;
+            border: 0;
+            color: #fff;
+            background: #000a47;
+        }
+
+        button:hover,
+        .calculate:hover {
+            transition: all .1s ease;
+            box-shadow: 0 0 0 0 #fff, 0 0 0 3px #0a009c;
+        }
+
+        .number-to-calculate {
+            font-size: 16px;
+        }
+
+        .title {
+            margin: 0 10px;
+            font-size: 16px;
+            ;
+        }
+
+        .total {
+            font-size: 24px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="number-to-calculate">Ausgewählte Zahl:
+        <b id="selected-number"></b>
+    </p>
+    <div class="form multiplier-container">
+        <input type="text" id="title" placeholder="Multiplikator Titel">
+        <button id="add-multiplikator">Multiplikator hinzufügen</button>
+    </div>
+    <div id="multiplier-fields"></div>
+    <div>
+        <p class="total">Total: <b id="total"></b></p>
+    </div>
+</body>
+
+</html>
